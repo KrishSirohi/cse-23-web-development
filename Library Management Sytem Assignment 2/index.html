@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📚 Library Management System</h1>
+            <p>Manage your books easily</p>
+        </header>
+
+        <!-- Add Book Section -->
+
+        <section class="form-section">
+
+            <h2>Add / Update Book</h2>
+
+            <form id="bookForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter Book Title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="author"
+                    placeholder="Enter Author Name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="year"
+                    placeholder="Publication Year"
+                    required
+                >
+
+                <button type="submit" id="submitBtn">
+                    Add Book
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelBtn"
+                    class="cancel"
+                    onclick="cancelEdit()"
+                    style="display:none;"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Books Section -->
+
+        <section class="books-section">
+
+            <div class="section-header">
+
+                <h2>📖 All Books</h2>
+
+                <button onclick="loadBooks()" class="refresh">
+                    Refresh
+                </button>
+
+            </div>
+
+            <div id="message"></div>
+
+            <div id="bookList"></div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
